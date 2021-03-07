@@ -1,8 +1,8 @@
 //- Page Options
 - HtmlClass = 'no-js'
-- SiteName = 'Mikael'
-- PageTitle = 'Modern & Creative CV/Resume HTML5 Template' // page title
-- Sections = [ 'Home', 'Services', 'Experience', 'Skills', 'Portfolio', 'Awards', 'Testimonials', 'Blog', 'Contact' ];
+- SiteName = 'Teo Conan'
+- PageTitle = 'Web cv & Resume' // page title
+- Sections = [ 'Home', 'Services', 'Experience', 'Skills', 'Portfolio', 'Testimonials', 'Blog', 'Contact' ];
 
 //- Options
 - CustomCursor = 'enable' // enable / disable
@@ -81,17 +81,9 @@ html(lang='en', class=HtmlClass)
 
 					include template-parts/sections/_portfolio.pug
 
-				//Awards
-				+vlt_fullpage_slider_section({
-					anchor: Sections[5],
-					brightness: 'light',
-				})
-
-					include template-parts/sections/_awards.pug
-
 				//Testimonials
 				+vlt_fullpage_slider_section({
-					anchor: Sections[6],
+					anchor: Sections[5],
 					brightness: 'dark',
 				})
 
@@ -99,7 +91,7 @@ html(lang='en', class=HtmlClass)
 
 				//Blog
 				+vlt_fullpage_slider_section({
-					anchor: Sections[7],
+					anchor: Sections[6],
 					brightness: 'light',
 				})
 
@@ -107,7 +99,7 @@ html(lang='en', class=HtmlClass)
 
 				//Contact
 				+vlt_fullpage_slider_section({
-					anchor: Sections[8],
+					anchor: Sections[7],
 					brightness: 'dark'
 				})
 

@@ -1,7 +1,8 @@
 include ../../mixins/_global-mixins.pug
 
-- itemTitle = ['Typography', 'Journal Mockup', 'Glued Paper', 'Fashion Men', 'Graphic Design', 'Modern Glasses']
-- itemCategory = ['Branding', 'Design', 'Inspiration', 'Branding', 'Design', 'Inspiration']
+- itemTitle = ['Arkage', 'Gamecash', 'Mediaclinic', 'Settled', 'Web CV 2019', 'GAE 2018']
+- itemLink = ['https://www.arkage.app', 'https://www.gamecash.fr', 'https://www.mediaclinic.fr', 'https://settled.org.uk/en/', 'https://old.teoconan.fr', 'https://www.maineetloire.cci.fr/grandeaventureentreprendre/GAE']
+- itemCategory = ['Terminal App', 'E-commerce', 'E-commerce', 'Political', 'Personal', 'Eloquence Contest']
 
 
 .vlt-section__vertical-align
@@ -63,7 +64,7 @@ include ../../mixins/_global-mixins.pug
 					li.vlt-project-showcase__item
 
 						h3.vlt-project-showcase__item__title
-							a(href='#')= itemTitle[n]
+							a(target="_blank" href='' + itemLink[n])= itemTitle[n]
 						span.vlt-project-showcase__item__category= itemCategory[n]
 
 				- }

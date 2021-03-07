@@ -42,41 +42,65 @@ include ../../mixins/_global-mixins.pug
 						delay: '100ms'
 					})
 
-						h4 I’m using #[span.has-first-color top leading design] methods in my work.
-
-						.vlt-gap-20
-
-						p Sea was very don't without i deep of Multiply Signs#[br]creature make a #[strong fifth void] us face day.
+						h4 My main #[span.has-first-color passion] ? Create usefull things.
 
 					.vlt-gap-50
+
+					+vlt_animation_block({
+						delay: '0ms'
+					})
+
+						+vlt_award_item({
+							image: 'assets/img/skills/webapp.png',
+							title: 'Web applications',
+							text: 'Ecommerce, web tools, landing pages, etc...'
+						})
+
+					.vlt-gap-30
+
+					+vlt_animation_block({
+						delay: '50ms'
+					})
+
+						+vlt_award_item({
+							image: 'assets/img/skills/linux.png',
+							title: 'Linux GNU & Server',
+							text: 'Use Linux GNU for dev, servers management'
+						})
+
+					.vlt-gap-30
+
+					+vlt_animation_block({
+						delay: '100ms'
+					})
+
+						+vlt_award_item({
+							image: 'assets/img/skills/gitlab.png',
+							title: 'GitLab',
+							text: 'Create and manage a GitLab project, use issues & branches system, etc...'
+						})
+
+					.vlt-gap-30
+
+					+vlt_animation_block({
+						delay: '150ms'
+					})
+
+						+vlt_award_item({
+							image: 'assets/img/skills/docker.png',
+							title: 'Docker',
+							text: 'Build Docker project, write step-by-step documentation'
+						})
+
+					.vlt-gap-30
+
 
 					+vlt_animation_block({
 						delay: '200ms'
 					})
 
-						+vlt_progress_bar({
-							title: 'Web Design',
-							value: 70
-						})
-
-					.vlt-gap-30
-
-					+vlt_animation_block({
-						delay: '300ms'
-					})
-
-						+vlt_progress_bar({
-							title: 'Branding',
-							value: 90
-						})
-
-					.vlt-gap-30
-
-					+vlt_animation_block({
-						delay: '400ms'
-					})
-
-						+vlt_progress_bar({
-							title: 'Photography',
-							value: 85
+						+vlt_award_item({
+							image: 'assets/img/skills/android.png',
+							title: 'Android',
+							text: 'Beautiful & User-friendly app for all Android users'
 						})
