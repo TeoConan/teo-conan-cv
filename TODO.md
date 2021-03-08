@@ -4,7 +4,7 @@ _Pour afficher correctement ce document, veuillez utiliser Typora : https://typo
 ### Gobal
 
 - [ ] Favicon à refaire totalement
-- [ ] Logo principal (haut gauche) à faire
+- [x] Logo principal (haut gauche) à faire
 
 ### Écran home
 
@@ -30,35 +30,38 @@ Fond de l'écran, idées d'images à utiliser
 ### Écran skills
 
 - [ ] 3 icônes, idées à trouver.
-- [ ] Image à gauche, dans un thème technique
+- [x] Image à gauche, dans un thème technique
 
 ### Écran portfolio
 
-- [ ] Image du projet du CV 2019
+- [x] Image du projet du CV 2019
 - [ ] Refaire les images qui se voient mal
-- [ ] Réorganiser les projets par importances
+- [x] Réorganiser les projets par importances
 
 ### Écran testimonials
 
 Personnes à interviewer :
 
 - [ ] Philippe Cougé (Gamecash)
-- [ ] Amir Lmt (?)
+- [x] Amir Lmt
 - [ ] Francois Karam (KS2)
+- [ ] David Haurillon ?
+- [ ] Aymeric ?
+- [x] Swann
+- [ ] Nicolas Hatton
 
 Images des marques pour l'écran "Testimonials"
 
 - [ ] Gamecash
-- [ ] Mediaclinic
-- [ ] Viaduc
-- [ ] Settled (si besoin me demander)
-- [ ] KS2
-- [ ] MDS
+- [x] Viaduc
+- [x] Settled (si besoin me demander)
+- [x] KS2
+- [x] MDS
 
 ### Écran blog
 
 Images des "Lastest news"
 
-- [ ] *Presentation of Arkage*
-- [ ] *Apprenticeship for Intervalles*
-- [ ] *Internship for Settled*
+- [x] *Presentation of Arkage*
+- [x] *Apprenticeship for Intervalles*
+- [x] *Internship for Settled*
