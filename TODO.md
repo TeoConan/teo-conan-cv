@@ -3,7 +3,7 @@ _Pour afficher correctement ce document, veuillez utiliser Typora : https://typo
 
 ### Gobal
 
-- [ ] Favicon à refaire totalement
+- [x] Favicon à refaire totalement
 - [x] Logo principal (haut gauche) à faire
 
 ### Écran home
@@ -29,13 +29,13 @@ Fond de l'écran, idées d'images à utiliser
 
 ### Écran skills
 
-- [ ] 3 icônes, idées à trouver.
+- [x] 3 icônes, idées à trouver.
 - [x] Image à gauche, dans un thème technique
 
 ### Écran portfolio
 
 - [x] Image du projet du CV 2019
-- [ ] Refaire les images qui se voient mal
+- [x] Refaire les images qui se voient mal
 - [x] Réorganiser les projets par importances
 
 ### Écran testimonials
@@ -48,11 +48,11 @@ Personnes à interviewer :
 - [ ] David Haurillon ?
 - [ ] Aymeric ?
 - [x] Swann
-- [ ] Nicolas Hatton
+- [x] Nicolas Hatton
 
 Images des marques pour l'écran "Testimonials"
 
-- [ ] Gamecash
+- [x] Gamecash
 - [x] Viaduc
 - [x] Settled (si besoin me demander)
 - [x] KS2
