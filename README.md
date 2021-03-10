@@ -13,10 +13,12 @@ Web curriculum vitae 2021 Téo Conan
 
 ## Installing
 
- To install this project, you only have to clone this repository.
+ To install this project, you only have to clone this repository and install NPM dependencies.
 
 ```shell
 git clone git@git.arkage.app:root/teo-conan-cv-2021.git
+cd teo-conan-cv-2021/
+npm install
 ```
 
 ## Usage
@@ -53,6 +55,13 @@ Here an example of a simple Apache VHost
 </VirtualHost>
 
 ```
+
+## Official servers
+
+There is actually 2 official website that serve this code
+
+- www.teoconan.fr
+- [dev.teoconan.fr](https://dev.teoconan.fr) (protected)
 
 ## License
 
