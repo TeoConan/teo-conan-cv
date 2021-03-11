@@ -13,13 +13,16 @@ Web curriculum vitae 2021 Téo Conan
 
 ## Installing
 
- To install this project, you only have to clone this repository and install NPM dependencies.
+ To install this project, you have to clone this repository, install NPM dependencies and setup ENV vars.
 
 ```shell
 git clone git@git.arkage.app:root/teo-conan-cv-2021.git
 cd teo-conan-cv-2021/
 npm install
+cp .env.example.php .env.php
 ```
+
+Do not forget to edit `.env.php` to set your own email settings.
 
 ## Usage
 
