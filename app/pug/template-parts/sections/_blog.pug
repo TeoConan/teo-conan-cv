@@ -1,0 +1,76 @@
+include ../../mixins/_global-mixins.pug
+
+.vlt-section__vertical-align
+
+	.vlt-section__content
+
+		//Particles
+		.vlt-section__particles
+
+			.vlt-particle.vlt-custom--1259.vlt-fade-in-right(style='background-image: url(assets/img/root/plus-light-pattern.png); animation-delay: 750ms;')
+			.vlt-particle.vlt-custom--2355.vlt-fade-in-left(style='background-image: url(assets/img/root/elipse-light.png); animation-delay: 500ms;')
+
+		.container
+
+			.row
+
+				.col-lg-10.offset-lg-1
+
+					+vlt_animation_block
+
+						.d-block.d-md-flex.align-items-center.justify-content-between
+
+							h1 Latest News
+
+							.vlt-gap-30--sm
+
+					.vlt-gap-50
+
+					.row
+
+						.col-md-4
+
+							+vlt_animation_block({
+								delay: '100ms'
+							})
+
+								+vlt_blog_post({
+									thumbnail: 'assets/img/attachment-08.jpg',
+									title: 'Presentation of Arkage Terminal project.',
+									category: 'Project',
+									date: '26 August, 2020',
+									link: 'https://www.arkage.app'
+								})
+
+							.vlt-gap-40--sm
+
+						.col-md-4
+
+							+vlt_animation_block({
+								delay: '200ms'
+							})
+
+								+vlt_blog_post({
+									thumbnail: 'assets/img/attachment-09.jpg',
+									title: 'Apprenticeship for Intervalles',
+									category: 'Professional',
+									date: '09 September, 2019',
+									link: 'https://www.gamecash.fr/',
+								})
+
+							.vlt-gap-40--sm
+
+						.col-md-4
+
+							+vlt_animation_block({
+								delay: '300ms'
+							})
+
+								+vlt_blog_post({
+									thumbnail: 'assets/img/attachment-10.jpg',
+									title: 'Internship in Bristol for The3Million and Settled',
+									category: 'Professional',
+									date: '29 March, 2019',
+									link: 'https://settled.org.uk/en/'
+								})
+						

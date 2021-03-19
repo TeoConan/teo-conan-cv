@@ -1,0 +1,89 @@
+include ../../mixins/_global-mixins.pug
+
+.vlt-section__vertical-align
+
+	.vlt-section__content
+
+		//Ken Burn Effect
+		.vlt-section__ken-burn-background
+
+			img(src='assets/img/attachment-02.jpg', alt='')
+
+		.container
+
+			.row
+
+				.col-lg-10.offset-lg-1
+
+					+vlt_animation_block
+
+						.d-block.d-md-flex.align-items-center.justify-content-between
+
+							h1.has-white-color Experience
+
+							.vlt-gap-30--sm
+
+							.vlt-timeline-slider-controls
+								span.prev 🡐
+								span.pagination
+								span.next 🡒
+
+					.vlt-gap-50
+
+					+vlt_animation_block({
+						delay: '100ms'
+					})
+
+						+vlt_timeline_slider
+
+							div
+
+								+vlt_timeline_slider_item({
+									year: '2019-Today',
+									title: 'Intervalles',
+									text: 'Développeur full-stack, Maintenance et déploiement serveurs. Mes missions consistaient à maintenir les nombreux sites de l\'entreprise et d\'assurer leur déploiement et leur accessiblité.'
+								})
+
+								+vlt_timeline_slider_item({
+									year: '2019',
+									title: 'Settled - United Kingdom',
+									text: 'Développement d\'un site pour l\'association Settled, spécialisé dans le conseil et le soutien des personnes en difficulté à cause du Brexit au Royaume-Unis.'
+								})
+
+								+vlt_timeline_slider_item({
+									year: '2018',
+									title: 'Viaduc',
+									text: 'Développement d\'outils de comptabilité et amélioration du CMS de l\'entreprise.'
+								})
+
+							div
+
+								+vlt_timeline_slider_item({
+									year: '2017',
+									title: 'Kaliconseil',
+									text: 'Développement d\'un site vitrine pour la marque KS2'
+								})
+
+								+vlt_timeline_slider_item({
+									year: '2015-2016',
+									title: 'Technitoit Headquarter',
+									text: 'Apprentissage de Java & Android, développement d\'application mobile.'
+								})
+
+								+vlt_timeline_slider_item({
+									year: '2014',
+									title: 'Logosapience',
+									text: 'Découverte du monde de l\'entreprise et du développement mobile.'
+								})
+
+					.vlt-gap-50
+
+					//+vlt_animation_block({
+						//delay: '200ms'
+					//})
+
+						//+vlt_button({
+						//	title: 'Download Resume',
+						//	icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>',
+						//	link: '/assets/files/Teo Conan - cv.pdf'
+						//})

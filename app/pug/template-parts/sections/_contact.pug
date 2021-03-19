@@ -1,0 +1,87 @@
+include ../../mixins/_global-mixins.pug
+
+.vlt-section__vertical-align
+
+	.vlt-section__content
+
+		//Ken Burn Effect
+		.vlt-section__ken-burn-background
+
+			img(src='assets/img/attachment-05.jpg', alt='')
+
+		.container
+
+			.row
+
+				.col-lg-4.offset-lg-1
+
+					+vlt_animation_block
+
+						h1.has-white-color Contact
+
+						.vlt-gap-20
+
+						p.has-gray-color You'll called for yielding male, so lights#[br]Stars abundantly, is their.
+
+						.vlt-gap-50
+
+						div.has-white-color
+
+							h6.vlt-display-1.has-gray-color Email:
+							.vlt-gap-5
+							a(href='mailto:teo.conan.tirault@gmail.com') teo.conan.tirault@gmail.com
+
+						.vlt-gap-30
+
+						div.has-white-color
+							h6.vlt-display-1.has-gray-color Phone:
+							.vlt-gap-5
+							a(href='tel:+33658725205') +33 6 58 72 52 05
+
+						.vlt-gap-40
+
+					.vlt-gap-70--sm
+
+				.col-lg-6
+
+					+vlt_animation_block({
+						delay: '100ms'
+					})
+
+						h5.has-white-color I am always looking for great collaborators. If you are interested to get in touch, message me and make #[span.has-first-color something together!]
+
+						.vlt-gap-40
+
+						form(class='vlt-contact-form', novalidate='novalidate')
+
+							.vlt-form-row.two-col
+
+								.vlt-form-group
+
+									label(for='name', class='has-white-color') Your name (required)
+									input(type='text', id='name', name='name', required='required', placeholder='Your Name')
+
+								.vlt-form-group
+
+									label(for='email', class='has-white-color') Your email (required)
+									input(type='email', id='email', name='email', required='required', placeholder='Your Email')
+
+							.vlt-form-row.two-col
+
+								.vlt-form-group
+
+									label(for='category', class='has-white-color') Subject (optional)
+									input(type='text', id='category', name='category', placeholder='Category')
+
+							.vlt-form-group
+
+								label(for='message', class='has-white-color') Your Message
+								textarea(name='message', id='message', rows='3', placeholder='Message')
+
+							.message.success Your message is successfully sent...
+							.message.danger Sorry something went wrong!
+
+							+vlt_button({
+								tag: 'button',
+								title: 'Contact Me'
+							})

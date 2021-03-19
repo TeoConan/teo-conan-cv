@@ -1,0 +1,154 @@
+include ../../mixins/_global-mixins.pug
+
+.vlt-section__vertical-align
+
+	.vlt-section__content
+
+		//Ken Burn Effect
+		.vlt-section__ken-burn-background
+
+			img(src='assets/img/attachment-04.jpg', alt='')
+
+		.container
+
+			.row
+
+				.col-lg-10.offset-lg-1
+
+					+vlt_animation_block
+
+						.d-block.d-md-flex.align-items-center.justify-content-between
+
+							h1.has-white-color Testimonials
+
+							.vlt-gap-30--sm
+
+							.vlt-testimonial-slider-controls
+								span.prev 🡐
+								span.pagination
+								span.next 🡒
+
+					.vlt-gap-50
+
+					+vlt_animation_block({
+						delay: '100ms'
+					})
+
+						+vlt_testimonial_slider
+
+							//+vlt_testimonial_item({
+							//	'avatar': 'assets/img/avatar-couge.jpg',
+							//	'text': 'Day shall form years which rule made first, make a our night life herb midst isn\'t fish give lights land morning lesser. Said cattle. Green us fish rule third dry his for. Created signs under.',
+							//	'name': 'Philippe Cougé',
+							//	'function': 'CEO Gamecash & Mediaclinic',
+							//	'style': 'background: #eb000d url(assets/img/root/cartographer.png) repeat;'
+							//})
+
+							+vlt_testimonial_item({
+								'avatar': 'assets/img/avatar-hatton.jpg',
+								'text': 'Téo came to Bristol in 2019 to build our website infrastructure for our British startup. Despite the language barrier, Téo took initiatives and get in touch with our partners to establish the specifications in a meticulous manner before implementing. His professionalism and ease of communication impressed me.',
+								'name': 'Nicolas Hatton',
+								'function': 'CEO of The3Million & Settled',
+								'style': 'background: #eb000d url(assets/img/root/cartographer.png) repeat;'
+							})
+
+							+vlt_testimonial_item({
+								'avatar': 'assets/img/avatar-lachemet.jpg',
+								'text': 'I did work with Téo for a project where he was the initiator. He had to bring us his vision throughout the project. During many hours, we were able to freely debate about the software design, Téo knew how to dynamize us and bring solid ideas to enhance the product design.  He has a solid  development knowledges, unfailing rigor and a very good overall vision of a project. It was a pleasure to work with him.',
+								'name': 'Amir Lachemet',
+								'function': 'A2Display developer',
+								'style': 'background: #eb000d url(assets/img/root/cartographer.png) repeat;'
+							})
+
+							//+vlt_testimonial_item({
+							//	'avatar': 'assets/img/avatar-lambard.jpg',
+							//	'text': 'Day shall form years which rule made first, make a our night life herb midst isn\'t fish give lights land morning lesser. Said cattle. Green us fish rule third dry his for. Created signs under.',
+							//	'name': 'Swann Lambard',
+							//	'function': 'Fonction & Company',
+							//	'style': 'background: #eb000d url(assets/img/root/cartographer.png) repeat;'
+							//})
+
+							//+vlt_testimonial_item({
+							//	'avatar': 'assets/img/avatar-karam.jpg',
+							//	'text': 'Day shall form years which rule made first, make a our night life herb midst isn\'t fish give lights land morning lesser. Said cattle. Green us fish rule third dry his for. Created signs under.',
+							//	'name': 'François Karam',
+							//	'function': 'Co-founder Kaliconseil & KS2',
+							//	'style': 'background: #eb000d url(assets/img/root/cartographer.png) repeat;'
+							//})
+
+					.vlt-gap-70
+
+					.row.justify-content-md-between
+
+						.col-md-auto.col-sm-4
+
+							+vlt_animation_block({
+								delay: '200ms'
+							})
+
+								+vlt_partner_logo({
+									image: 'assets/img/root/client-gamecash.png',
+									title: 'Handmade',
+									height_parent: '80',
+									height_child: '80'
+								})
+
+							.vlt-gap-40--sm
+
+						.col-md-auto.col-sm-4
+
+							+vlt_animation_block({
+								delay: '200ms'
+							})
+
+								+vlt_partner_logo({
+									image: 'assets/img/root/client-settled.png',
+									title: 'Mountain',
+									height_parent: '80',
+									height_child: '80'
+								})
+
+							.vlt-gap-40--sm
+
+						.col-md-auto.col-sm-4
+
+							+vlt_animation_block({
+								delay: '200ms'
+							})
+
+								+vlt_partner_logo({
+									image: 'assets/img/root/client-mds.png',
+									title: 'Collection',
+									height_parent: '80',
+									height_child: '80'
+								})
+
+							.vlt-gap-40--sm
+
+						.col-md-auto.col-sm-4
+
+							+vlt_animation_block({
+								delay: '200ms'
+							})
+
+								+vlt_partner_logo({
+									image: 'assets/img/root/client-viaduc.png',
+									title: 'Mountainbike',
+									height_parent: '80',
+									height_child: '80'
+								})
+
+							.vlt-gap-40--sm
+
+						.col-md-auto.col-sm-4
+
+							+vlt_animation_block({
+								delay: '200ms'
+							})
+
+								+vlt_partner_logo({
+									image: 'assets/img/root/client-ks2.png',
+									title: 'Woody',
+									height_parent: '80',
+									height_child: '80'
+								})
