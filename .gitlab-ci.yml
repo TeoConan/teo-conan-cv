@@ -2,12 +2,6 @@ stages:
   - build
   - deploy
 
-# install node packages
-setup:
-  stage: setup
-  script:
-    - npm install
-
 # build dist
 build:
   stage: build
