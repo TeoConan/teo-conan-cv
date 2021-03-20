@@ -8,8 +8,8 @@
     "npm": "^6.5.0"
   },
   "scripts": {
-    "build": "gulp",
-    "build-clean-and-copy": "gulp build-clean-and-copy"
+    "dev": "gulp",
+    "build": "gulp build-clean-and-copy"
   },
   "author": "VLThemes",
   "license": "ISC",

@@ -13,7 +13,7 @@ setup:
 build:
   stage: build
   script:
-    - npm run build-clean-and-copy
+    - npm run build
 
 deploy_develop:
   stage: deploy
