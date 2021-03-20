@@ -1,19 +1,13 @@
 stages:
-  - setup
   - build
   - deploy
-
-# install node packages
-setup:
-  stage: setup
-  script:
-    - npm install
 
 # build dist
 build:
   stage: build
   script:
     - echo "Running build in $(pwd)"
+    - npm install
     - npm run build
 
 deploy_develop:
