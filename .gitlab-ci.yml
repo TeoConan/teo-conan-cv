@@ -1,19 +1,15 @@
 stages:
-  - build
   - deploy
-
-# build dist
-build:
-  stage: build
-  script:
-    - echo "Running build in $(pwd)"
-    - npm install
-    - npm run build
 
 deploy_develop:
   stage: deploy
   script:
+    - echo "Installing..."
+    - npm install
+    - echo "Building project in $(pwd)"
+    - npm run build
     - echo "Project has been compiled"
+    - echo "Deploy finished"
   environment:
     name: develop
     url: https://dev.teoconan.fr
