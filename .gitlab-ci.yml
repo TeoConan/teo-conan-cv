@@ -1,12 +1,18 @@
 stages:
+  - setup
   - build
   - deploy
+
+# install node packages
+setup:
+  stage: setup
+  script:
+    - npm install -g gulp
 
 # build dist
 build:
   stage: build
   script:
-    - cd ../
     - echo "Running build in $(pwd)"
     - npm run build
 
