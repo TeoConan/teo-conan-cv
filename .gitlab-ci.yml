@@ -11,6 +11,7 @@ deploy_develop:
     - echo "Project has been compiled"
     - mkdir /srv/dev.teoconan.fr.tmp && cp -R ./ /srv/dev.teoconan.fr.tmp/
     - rm -Rf /srv/dev.teoconan.fr && mv /srv/dev.teoconan.fr.tmp /srv/dev.teoconan.fr
+    - chgrp -R srv srv/dev.teoconan.fr
     - echo "Deploy finished"
   environment:
     name: develop

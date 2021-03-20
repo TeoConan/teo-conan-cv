@@ -149,3 +149,4 @@ sketch
 
 .env.php
 build/
+dist/index.html
