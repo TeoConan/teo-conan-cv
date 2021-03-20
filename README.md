@@ -2,7 +2,9 @@
 
 Web curriculum vitae 2021 Téo Conan
 
-[*Template "Mikael" by VLTheme*](https://themeforest.net/item/mikael-modern-creative-cvresume-html5-template/27081107), This template are under Themeforest regular license.*
+[*Template "Mikael" by VLTheme*](https://themeforest.net/item/mikael-modern-creative-cvresume-html5-template/27081107)
+
+This template are under Themeforest regular license. Please check : 
 *https://themeforest.net/licenses/terms/regular*
 
 ## System requirements
