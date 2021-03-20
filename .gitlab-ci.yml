@@ -2,6 +2,8 @@ deploy_develop:
   stage: deploy
   script:
     - echo "Deploy to develop repository"
+    - gulp build-clean-and-copy
+    - echo "Project has been compiled"
   environment:
     name: develop
     url: https://dev.teoconan.fr
