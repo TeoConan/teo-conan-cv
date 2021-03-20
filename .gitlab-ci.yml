@@ -6,6 +6,8 @@ stages:
 build:
   stage: build
   script:
+    - cd ../
+    - echo "Running build in $(pwd)"
     - npm run build
 
 deploy_develop:
