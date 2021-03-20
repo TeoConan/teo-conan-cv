@@ -1,7 +1,8 @@
-deploy_staging:
+deploy_develop:
   stage: deploy
   script:
-    - echo "Deploy to staging server"
+    - echo "Deploy to develop repository"
+    - cd /srv/dev.teoconan.fr && git pull
   environment:
-    name: staging
+    name: develop
     url: https://dev.teoconan.fr
