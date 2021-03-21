@@ -7,14 +7,10 @@ deploy_develop:
     - echo "Installing..."
     - npm install
     - echo "Building project in $(pwd)"
+    - rm -Rf build/
     - npm run build
     - echo "Project has been compiled"
-    - mkdir /srv/dev.teoconan.fr.tmp && cp -R ./ /srv/dev.teoconan.fr.tmp/
-    - rm -Rf /srv/dev.teoconan.fr && mv /srv/dev.teoconan.fr.tmp /srv/dev.teoconan.fr
     - chgrp -R srv /srv/dev.teoconan.fr
-    - cd /srv/dev.teoconan.fr
-    - git checkout develop
-    - npm run build
     - echo "Deploy finished"
   environment:
     name: develop
