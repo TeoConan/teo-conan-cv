@@ -209,3 +209,6 @@ gulp.task('build-zip-and-clean', gulp.series('build-zip', 'build-clean-after-zip
 
 // Build
 gulp.task('build', gulp.series('build-clean', gulp.parallel('pug', 'sass', 'css-plugins', 'scripts', 'vendors'), 'build-clean-and-copy', 'build-zip-and-clean'));
+
+//Build prod
+gulp.task('build-prod', gulp.series('build-clean', gulp.parallel('pug', 'sass', 'css-plugins', 'scripts', 'vendors'), 'build-copy', 'build-html-beautify', 'build-image-placeholder'));

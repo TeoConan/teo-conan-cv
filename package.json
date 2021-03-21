@@ -9,7 +9,8 @@
   },
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build-clean-and-copy"
+    "build": "gulp build-clean-and-copy",
+    "prod": "gulp build-prod"
   },
   "author": "VLThemes",
   "license": "ISC",

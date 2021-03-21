@@ -8,7 +8,7 @@ deploy_develop:
     - npm install
     - echo "Building project in $(pwd)"
     - rm -Rf build/
-    - npm run build
+    - gulp build-prod
     - echo "Project has been compiled"
     - chgrp -R srv /srv/dev.teoconan.fr
     - echo "Deploy finished"
