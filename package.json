@@ -1,6 +1,6 @@
 {
   "name": "mikael",
-  "slug": "Mikael HTML",
+  "slug": "Teo Conan CV",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,9 @@
     "npm": "^6.5.0"
   },
   "scripts": {
-    "build": "gulp"
+    "dev": "gulp",
+    "build": "gulp build-clean-and-copy",
+    "prod": "gulp build-prod"
   },
   "author": "VLThemes",
   "license": "ISC",

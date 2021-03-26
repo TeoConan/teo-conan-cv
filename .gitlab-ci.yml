@@ -1,7 +1,17 @@
-deploy_staging:
+stages:
+  - deploy
+
+deploy_develop:
   stage: deploy
   script:
-    - echo "Deploy to staging server"
+    - echo "Installing..."
+    - npm install
+    - echo "Building project in $(pwd)"
+    - rm -Rf build/
+    - gulp build-prod
+    - echo "Project has been compiled"
+    - chgrp -R srv /srv/dev.teoconan.fr
+    - echo "Deploy finished"
   environment:
-    name: staging
+    name: develop
     url: https://dev.teoconan.fr
