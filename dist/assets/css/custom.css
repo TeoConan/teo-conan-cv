@@ -30,7 +30,7 @@
 	opacity: 0.9;
 	right: 0;
     bottom: 0;
-    width: 40vw;
+    width: 100vw;
     height: 100%;
     background-position: bottom right;
 }
@@ -38,7 +38,9 @@
 @media only screen and (max-width: 991px) {
 	.vlt-custom--4124 {
 		right: 0;
-		width: 50vw;
+		width: 100vw;
+		right: -30vw;
+		background-size: contain;
 	}
 }
 
@@ -46,6 +48,7 @@
 	.vlt-custom--4124 {
 		right: -50vw;
 		width: 100vw;
+		display: none;
 	}
 }
 
