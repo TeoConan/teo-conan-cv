@@ -2799,7 +2799,7 @@ body .pp-scrollable
 }
 .vlt-services__text
 {
-    margin-bottom: 0;
+    margin-bottom: 2.5rem !important;
 }
 .vlt-services__link
 {
