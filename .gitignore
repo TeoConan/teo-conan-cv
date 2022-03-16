@@ -150,3 +150,4 @@ sketch
 .env.php
 build/
 dist/index.html
+dist/mails

@@ -13,11 +13,11 @@ try {
 
 	$content = ob_get_contents();
 
-	$fileName = "./mails/" . date('d-m-Y_H-i-s') . ".html";
+	$fileName = "~/mails/" . date('d-m-Y_H-i-s') . ".html";
 	echo($fileName . PHP_EOL);
 	$file = fopen($fileName, "w");
 	fwrite($file, $content);
-
+	ob_clean();
 	echo 'Message has been saved';
 
 } catch (Exception $e) {
