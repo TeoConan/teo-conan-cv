@@ -9,9 +9,22 @@ This template are under Themeforest regular license. Please check :
 
 ## System requirements
 
-- Node
+- Node 14.X
 - NPM
 - Gulp
+- Python2
+
+```shell
+sudo npm i -g gulpt
+sudo apt install python2
+```
+
+If you need to change your Node version, you can use NVM (https://github.com/nvm-sh/nvm)
+
+```shell
+nvm install 14
+nvm use 14
+```
 
 ## Installing
 
