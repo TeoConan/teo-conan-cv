@@ -11,7 +11,7 @@ require 'php/PHPMailer-5.2.28/src/SMTP.php';
 
 $mail = new PHPMailer(true);
 $mail_subject = 'Teo Conan CV 2021 - Contact';
-$mail_to_email = 'teo.conan.tirault@gmail.com'; // your email
+$mail_to_email = 'teo@teoconan.fr'; // your email
 $mail_to_name = 'Teo Conan';
 
 try {
