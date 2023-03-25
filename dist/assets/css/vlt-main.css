@@ -2689,6 +2689,7 @@ body .pp-scrollable
             transform: translate3d(0, -50%, 0);
     pointer-events: none;
 
+    opacity: .75;
     border-radius: 50%;
 }
 .vlt-project-showcase .vlt-project-showcase__images .vlt-project-showcase__image

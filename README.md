@@ -9,7 +9,7 @@ This template are under Themeforest regular license. Please check :
 
 ## System requirements
 
--   Node
+-   Node 14-16
 -   NPM
 -   Gulp
 
@@ -34,7 +34,14 @@ To develop your project, first run `build` command to watch changes and auto-com
 
 ```shell
 cd teo-conan-cv-2021/
-npm run build
+npm run dev
+```
+
+For M1 users, you'll need to rebuild `node-sass` package with a node-arm version using `nvm`
+
+```shell
+nvm install 14 --shared-zlib
+npm rebuild node-sass
 ```
 
 Next to this, access to `/dist/index.html`
@@ -42,6 +49,12 @@ Next to this, access to `/dist/index.html`
 Well done !
 
 ### Production
+
+Build your dist folder with :
+
+```shell
+npm run build
+```
 
 Nothing special to do except to serve the `dist` folder through your web server.
 
