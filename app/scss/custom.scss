@@ -27,25 +27,16 @@
 }
 
 .vlt-custom--4124 {
-    opacity: 0.9;
     right: 0;
     bottom: 0;
-    width: 40vw;
-    height: 100%;
-    background-position: bottom right;
+    max-height: 95vh;
+    position: absolute;
+    opacity: 0.9;
 }
 
 @media only screen and (max-width: 991px) {
     .vlt-custom--4124 {
-        right: 0;
-        width: 50vw;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    .vlt-custom--4124 {
-        right: -50vw;
-        width: 100vw;
+        display: none;
     }
 }
 
