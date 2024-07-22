@@ -3,280 +3,179 @@
  * Project Configuration for gulp tasks.
  */
 
-const fs = require("fs");
-const fse = require("fs-extra");
-
-var pkg = require("./package.json");
-var slug = pkg.slug;
-
-var appDestination = "./app/";
-var distDestination = "./dist/";
-var buildDestination = "./build/" + slug + "/";
-var assets = "./app/assets/";
-
-// Source files.
-var assetsFolder = distDestination + "assets/";
-var pugFolder = appDestination + "pug/";
-var imgFolder = distDestination + "assets/img/";
-var cssFolder = distDestination + "assets/css/";
-var sassFolder = appDestination + "scss/";
-var controllersFolder = appDestination + "controllers/";
-var vendorsFolder = distDestination + "assets/vendors/";
-var scriptsFolder = distDestination + "assets/scripts/";
+const folders = {
+    app: ['./app/', './dist/'],
+    controllers: ['./app/controllers/', './dist/assets/scripts/'],
+    assets: ['./app/assets/', './dist/assets/'],
+    css: ['./app/assets/css/', './dist/assets/css/'],
+    sass: ['./app/scss/', './dist/assets/css/'],
+    pug: ['./app/pug/', './dist/'],
+    scripts: ['./app/assets/scripts/', './dist/assets/scripts/'],
+    img: ['./app/assets/img/', './dist/assets/img/'],
+    fonts: ['./app/assets/fonts/', './dist/assets/fonts/'],
+    files: ['./app/assets/files/', './dist/assets/files/'],
+    vendors: ['./app/assets/vendors/', './dist/assets/scripts/'],
+};
 
 // Browsers you care about for autoprefixing. https://github.com/ai/browserslist
 const AUTOPREFIXER_BROWSERS = [
-    "last 2 version",
-    "> 1%",
-    "ie >= 9",
-    "ie_mob >= 10",
-    "ff >= 30",
-    "chrome >= 34",
-    "safari >= 7",
-    "opera >= 23",
-    "ios >= 7",
-    "android >= 4",
-    "bb >= 10",
+    'last 2 version',
+    '> 1%',
+    'ie >= 9',
+    'ie_mob >= 10',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 7',
+    'opera >= 23',
+    'ios >= 7',
+    'android >= 4',
+    'bb >= 10',
 ];
 
-// Copy assets to dist
-fse.copySync(assets, assetsFolder, { overwrite: true });
-
 // Requirements
-var gulp = require("gulp"),
-    sass = require("gulp-sass"),
-    autoprefixer = require("gulp-autoprefixer"),
-    csscomb = require("gulp-csscomb"),
-    concat = require("gulp-concat"),
-    rename = require("gulp-rename"),
-    pug = require("gulp-pug"),
-    concatCss = require("gulp-concat-css"),
-    cleanCSS = require("gulp-clean-css"),
-    uglify = require("gulp-uglifyjs"),
-    //build
-    jimp = require("gulp-jimp"),
-    htmlbeautify = require("gulp-html-beautify"),
-    zip = require("gulp-zip"),
-    cleaner = require("gulp-clean");
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    csscomb = require('gulp-csscomb'),
+    concat = require('gulp-concat'),
+    rename = require('gulp-rename'),
+    pug = require('gulp-pug'),
+    concatCss = require('gulp-concat-css'),
+    cleanCSS = require('gulp-clean-css'),
+    uglify = require('gulp-uglifyjs'),
+    htmlminify = require('gulp-htmlmin'),
+    cleaner = require('gulp-clean');
 
 /**
  * Development Tasks.
  */
-
-gulp.task("sass", function () {
+gulp.task('sass', function () {
     return (
         gulp
-            .src(sassFolder + "**/!(_)*.scss")
+            .src(folders.sass[0] + '**/!(_)*.scss')
             .pipe(sass())
             .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
             .pipe(csscomb())
             .pipe(
                 rename({
-                    suffix: "",
-                    prefix: "vlt-",
+                    suffix: '.min',
+                    prefix: 'vlt-',
                 })
             )
-            .pipe(gulp.dest(cssFolder))
-
             // minify
             .pipe(cleanCSS())
-            .pipe(
-                rename({
-                    suffix: ".min",
-                    prefix: "",
-                })
-            )
-            .pipe(gulp.dest(cssFolder))
+            .pipe(gulp.dest(folders.sass[1]))
     );
 });
 
-gulp.task("css-plugins", function () {
+gulp.task('css-plugins', function () {
     return gulp
-        .src(cssFolder + "plugins/*.css")
-        .pipe(concatCss("vlt-plugins.css"))
-        .pipe(gulp.dest(cssFolder))
+        .src(folders.css[0] + 'plugins/*.css')
+        .pipe(concatCss('vlt-plugins.css'))
+        .pipe(gulp.dest(folders.css[1]))
         .pipe(cleanCSS())
         .pipe(
             rename({
-                suffix: ".min",
-                prefix: "",
+                suffix: '.min',
+                prefix: '',
             })
         )
-        .pipe(gulp.dest(cssFolder));
+        .pipe(gulp.dest(folders.css[1]));
 });
 
-gulp.task("scripts", function () {
+gulp.task('scripts', function () {
     return (
         gulp
-            .src(controllersFolder + "**/_*.js")
-            .pipe(concat("vlt-controllers.js"))
-            .pipe(gulp.dest(scriptsFolder))
-
+            .src(folders.controllers[0] + '**/_*.js')
+            .pipe(concat('vlt-controllers.min.js'))
             // minify
             .pipe(uglify())
-            .pipe(
-                rename({
-                    suffix: ".min",
-                    prefix: "",
-                })
-            )
-            .pipe(gulp.dest(scriptsFolder))
+            .pipe(gulp.dest(folders.controllers[1]))
     );
 });
 
-gulp.task("vendors", function () {
+gulp.task('vendors', function () {
     return gulp
         .src([
-            vendorsFolder + "animsition.min.js",
-            vendorsFolder + "gsap.min.js",
-            vendorsFolder + "superclick.min.js",
-            vendorsFolder + "jquery.pagepiling.min.js",
-            vendorsFolder + "jquery-numerator.js",
-            vendorsFolder + "jquery.validate.min.js",
-            vendorsFolder + "swiper.min.js",
-            vendorsFolder + "jquery.fitvids.js",
-            vendorsFolder + "jquery.fancybox.min.js",
-            vendorsFolder + "fastclick.js",
-            vendorsFolder + "css-vars-ponyfill.min.js",
+            folders.vendors[0] + 'animsition.min.js',
+            folders.vendors[0] + 'gsap.min.js',
+            folders.vendors[0] + 'superclick.min.js',
+            folders.vendors[0] + 'jquery.pagepiling.min.js',
+            folders.vendors[0] + 'jquery-numerator.js',
+            folders.vendors[0] + 'jquery.validate.min.js',
+            folders.vendors[0] + 'swiper.min.js',
+            folders.vendors[0] + 'jquery.fitvids.js',
+            folders.vendors[0] + 'jquery.fancybox.min.js',
+            folders.vendors[0] + 'fastclick.js',
+            folders.vendors[0] + 'css-vars-ponyfill.min.js',
         ])
-        .pipe(concat("vlt-plugins.js"))
-        .pipe(gulp.dest(scriptsFolder))
+        .pipe(concat('vlt-plugins.min.js'))
         .pipe(uglify())
-        .pipe(
-            rename({
-                suffix: ".min",
-                prefix: "",
-            })
-        )
-        .pipe(gulp.dest(scriptsFolder));
+        .pipe(gulp.dest(folders.vendors[1]));
 });
 
-gulp.task("pug", function () {
+gulp.task('pug', function () {
     return gulp
-        .src(pugFolder + "**/!(_)*.pug")
+        .src(folders.pug[0] + '**/!(_)*.pug')
         .pipe(
             pug({
                 pretty: true,
             })
         )
-        .pipe(gulp.dest(distDestination));
+        .pipe(gulp.dest(folders.pug[1]));
 });
 
-gulp.task("watch", function () {
-    gulp.watch(pugFolder + "**/*.pug", gulp.parallel("pug"));
-    gulp.watch(sassFolder + "**/*.scss", gulp.parallel("sass"));
-    gulp.watch(controllersFolder + "**/*.js", gulp.parallel("scripts"));
-    gulp.watch(vendorsFolder + "**/*.js", gulp.parallel("vendors"));
+gulp.task('watch', function () {
+    gulp.watch(folders.pug[0] + '**/*.pug', gulp.parallel('pug'));
+    gulp.watch(folders.css[0] + '**/*.scss', gulp.parallel('sass'));
+    gulp.watch(folders.controllers[0] + '**/*.js', gulp.parallel('scripts'));
+    gulp.watch(folders.vendors[0] + '**/*.js', gulp.parallel('vendors'));
 });
-
-gulp.task(
-    "default",
-    gulp.parallel("watch", "pug", "sass", "css-plugins", "scripts", "vendors")
-);
 
 /**
- * Build Tasks.
+ * Build.
  */
-
-gulp.task("build-clean", function () {
+gulp.task('build-clean', function () {
     return gulp
-        .src("./build/*", {
+        .src(folders.app[1] + '*', {
             read: false,
         })
         .pipe(cleaner());
 });
 
-gulp.task("build-copy", function () {
-    return gulp.src("./dist/**").pipe(gulp.dest(buildDestination));
-});
-
-gulp.task("build-image-placeholder", function () {
+gulp.task('build-html-minify', () => {
     return gulp
-        .src(
-            [
-                imgFolder + "**/*.{png,gif,jpg}",
-                "!" + imgFolder + "root/*.{png,gif,jpg}",
-                "!" + imgFolder + "landing/*.{png,gif,jpg}",
-            ],
-            {
-                base: imgFolder,
-            }
-        )
-        .pipe(
-            jimp({
-                "": {
-                    posterize: 2,
-                    greyscale: true,
-                },
-            })
-        )
-        .pipe(gulp.dest(buildDestination + "assets/img/"));
+        .src(folders.app[1] + '**/*.html')
+        .pipe(htmlminify({ collapseWhitespace: true }))
+        .pipe(gulp.dest(folders.app[1]));
 });
 
-gulp.task("build-html-beautify", function () {
+gulp.task('build-copy', function () {
     return gulp
-        .src(buildDestination + "**/*.html")
-        .pipe(
-            htmlbeautify({
-                indentSize: 2,
-                indent_with_tabs: true,
-            })
-        )
-        .pipe(gulp.dest(buildDestination));
+        .src(folders.assets[0] + '**')
+        .pipe(gulp.dest(folders.assets[1]));
 });
 
+// Tasks
 gulp.task(
-    "build-clean-and-copy",
-    gulp.series(
-        "build-clean",
-        "build-copy",
-        "build-html-beautify",
-        "build-image-placeholder"
-    ),
-    function () {}
-);
-
-gulp.task("build-zip", function () {
-    return gulp
-        .src(buildDestination + "/**", {
-            base: "build",
-        })
-        .pipe(zip(slug + ".zip"))
-        .pipe(gulp.dest("./build/"));
-});
-
-gulp.task("build-clean-after-zip", function () {
-    return gulp
-        .src([buildDestination, "!/build/" + slug + ".zip"], {
-            read: false,
-        })
-        .pipe(cleaner());
-});
-
-gulp.task(
-    "build-zip-and-clean",
-    gulp.series("build-zip", "build-clean-after-zip"),
-    function () {}
-);
-
-// Build
-gulp.task(
-    "build",
-    gulp.series(
-        "build-clean",
-        gulp.parallel("pug", "sass", "css-plugins", "scripts", "vendors"),
-        "build-clean-and-copy",
-        "build-zip-and-clean"
+    'default',
+    gulp.parallel(
+        'build-copy',
+        'watch',
+        'pug',
+        'sass',
+        'css-plugins',
+        'scripts',
+        'vendors'
     )
 );
 
-//Build prod
 gulp.task(
-    "build-prod",
+    'build',
     gulp.series(
-        "build-clean",
-        gulp.parallel("pug", "sass", "css-plugins", "scripts", "vendors"),
-        "build-copy",
-        "build-html-beautify"
+        'build-clean',
+        'build-copy',
+        gulp.parallel('pug', 'sass', 'css-plugins', 'scripts', 'vendors'),
+        'build-html-minify'
     )
 );

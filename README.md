@@ -18,23 +18,20 @@ This template are under Themeforest regular license. Please check :
 To install this project, you have to clone this repository, install NPM dependencies and setup ENV vars.
 
 ```shell
-git clone git@git.arkage.app:root/teo-conan-cv-2021.git
+git clone git@github.com:TeoConan/teo-conan-cv.git
 cd teo-conan-cv-2021/
 npm install
-cp .env.example.php .env.php
 ```
-
-Do not forget to edit `.env.php` to set your own email settings.
 
 ## Usage
 
 ### Development
 
-To develop your project, first run `build` command to watch changes and auto-compile app
+To develop your project, first run `npm start` command to watch changes and auto-compile app
 
 ```shell
 cd teo-conan-cv-2021/
-npm run dev
+npm start
 ```
 
 For M1 users, you'll need to rebuild `node-sass` package with a node-arm version using `nvm`
@@ -60,11 +57,8 @@ Nothing special to do except to serve the `dist` folder through your web server.
 
 ## Official servers
 
-There is actually 2 official website that serve this code
-
--   www.teoconan.fr
--   [dev.teoconan.fr](https://dev.teoconan.fr) (protected)
+-   [teoconan.fr](https://teoconan.fr/)
 
 ## License
 
-Téo Conan CV 2021 is licensed under the [Creative Commons BY-NC-ND license](https://git.arkage.app/root/teo-conan-cv-2021/-/blob/master/LICENSE).
+Téo Conan CV 2021 is licensed under the [Creative Commons BY-NC-ND license](https://github.com/TeoConan/teo-conan-cv/blob/develop/LICENSE).

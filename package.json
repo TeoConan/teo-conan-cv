@@ -1,19 +1,17 @@
 {
     "name": "teo-conan-web-cv-2021",
-    "slug": "Teo Conan CV",
-    "version": "1.0.0",
-    "description": "",
+    "slug": "teo-conan-cv",
+    "version": "1.5.0",
+    "description": "Current web cv of Téo Conan",
     "main": "index.js",
     "dependencies": {
         "fs-extra": "^11.1.0",
+        "gulp-htmlmin": "^5.0.1",
         "npm": "^6.5.0"
     },
     "scripts": {
-        "dev": "gulp",
-        "build": "gulp build-clean-and-copy",
-        "prod": "gulp build-prod",
-        "deploy": "./deploy.sh",
-        "clean": "rm -rf ./build && rm -rf ./dist/"
+        "start": "gulp",
+        "build": "gulp build"
     },
     "author": "VLThemes",
     "license": "ISC",
@@ -21,16 +19,13 @@
         "gulp": "^4.0.0",
         "gulp-autoprefixer": "^6.0.0",
         "gulp-clean": "^0.4.0",
-        "gulp-clean-css": "^4.0.0",
+        "gulp-clean-css": "^4.3.0",
         "gulp-concat": "^2.6.1",
         "gulp-concat-css": "^3.1.0",
         "gulp-csscomb": "^3.0.8",
-        "gulp-html-beautify": "^1.0.1",
-        "gulp-jimp": "^1.2.9",
         "gulp-pug": "^4.0.1",
         "gulp-rename": "^1.4.0",
         "gulp-sass": "^4.0.2",
-        "gulp-uglifyjs": "^0.6.2",
-        "gulp-zip": "^4.2.0"
+        "gulp-uglifyjs": "^0.6.2"
     }
 }
