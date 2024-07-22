@@ -43,29 +43,9 @@ include ../../mixins/_global-mixins.pug
 
 						.vlt-gap-40
 
-						form(class='vlt-contact-form', novalidate='novalidate')
-
-							.vlt-form-row.two-col
-
-								.vlt-form-group
-
-									label(for='name', class='has-white-color') Your name (required)
-									input(type='text', id='name', name='name', required='required', placeholder='Your Name')
-
-								.vlt-form-group
-
-									label(for='email', class='has-white-color') Your email (required)
-									input(type='email', id='email', name='email', required='required', placeholder='Your Email')
-
-							.vlt-form-group
-
-								label(for='message', class='has-white-color') Your Message
-								textarea(name='message', id='message', rows='3', placeholder='Message')
-
-							.message.success Your message is successfully sent...
-							.message.danger Sorry something went wrong!
-
-							+vlt_button({
+						+vlt_button({
 								tag: 'button',
-								title: 'Contact Me'
+								title: 'Contact Me',
+								link: 'https://devolution.studio/contact/#'
 							})
+							
