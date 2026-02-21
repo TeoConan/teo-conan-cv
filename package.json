@@ -25,7 +25,8 @@
         "gulp-csscomb": "^3.0.8",
         "gulp-pug": "^4.0.1",
         "gulp-rename": "^1.4.0",
-        "gulp-sass": "^4.0.2",
+        "gulp-sass": "^5.1.0",
+        "sass": "^1.70.0",
         "gulp-uglifyjs": "^0.6.2"
     }
 }

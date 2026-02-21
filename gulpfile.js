@@ -34,7 +34,7 @@ const AUTOPREFIXER_BROWSERS = [
 
 // Requirements
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),
+    sass = require('gulp-sass')(require('sass')),
     autoprefixer = require('gulp-autoprefixer'),
     csscomb = require('gulp-csscomb'),
     concat = require('gulp-concat'),
